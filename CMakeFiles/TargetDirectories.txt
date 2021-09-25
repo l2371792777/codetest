@@ -1,0 +1,3 @@
+/home/ayanami/source/code/codetest/CMakeFiles/rebuild_cache.dir
+/home/ayanami/source/code/codetest/CMakeFiles/edit_cache.dir
+/home/ayanami/source/code/codetest/CMakeFiles/main.dir
