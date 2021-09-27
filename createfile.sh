@@ -5,20 +5,27 @@ if [ $# != 1 ]; then
     exit
 fi
 
-PRE_DIR=$(pwd)/leet-test/starting
-TAR_DIR=leet_$1_$(date "+%Y-%m-%d")
+PRE_DIR=$(pwd)/leet-test
+TAR_DIR=/starting/leet_$1_$(date "+%Y-%m-%d")
 
 #创建目标文件
 if [ -d "${PRE_DIR}/starting/leet_$1_$(date "+%Y-%m-%d")" ]; then
     rm -r ${PRE_DIR}/${TAR_DIR}
 fi
-mkdir ${PRE_DIR}/starting/${TAR_DIR}
-cp ${PRE_DIR}/examples/main-example.cpp ${PRE_DIR}/${TAR_DIR}/main.cpp
+mkdir ${PRE_DIR}/${TAR_DIR}
 scrot -s ${PRE_DIR}/${TAR_DIR}/leet_$1.png
 
+#备份前一次代码
 if [ -f "./main.old.cpp" ]; then
     rm main.old.cpp
 fi
 mv $(pwd)/main.cpp $(pwd)/main.old.cpp
-echo //...leetcode_$1_$(date "+%Y-%m-%d") >$(pwd)/main.cpp
 
+#写入标志信息
+URL=//...https://leetcode-cn.com/problems/
+TIP=//...leetcode_$1_$(date "+%Y-%m-%d")
+cp ${PRE_DIR}/examples/main-example.cpp $(pwd)/main.cpp
+sed -i "1i\
+    $TIP\
+    \n$URL" $(pwd)/main.cpp
+cp $(pwd)/main.cpp ${PRE_DIR}/${TAR_DIR}/main.cpp
