@@ -9,7 +9,7 @@ PRE_DIR=$(pwd)/leet-test
 TAR_DIR=/starting/leet_$1_$(date "+%Y-%m-%d")
 
 #创建目标文件
-if [ -d "${PRE_DIR}/starting/leet_$1_$(date "+%Y-%m-%d")" ]; then
+if [ -d "${PRE_DIR}/${TAR_DIR}" ]; then
     rm -r ${PRE_DIR}/${TAR_DIR}
 fi
 mkdir ${PRE_DIR}/${TAR_DIR}
