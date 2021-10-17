@@ -19,6 +19,7 @@ struct TreeNode
 };
 
 int pathSum(TreeNode *root, int targetSum);
+int rootSum(TreeNode *root, int targetSum);
 
 void test();
 
@@ -32,6 +33,33 @@ void test()
 {
 }
 
+int rootSum(TreeNode *root, int targetSum)
+{
+    if (!root)
+    {
+        return 0;
+    }
+
+    int ret = 0;
+    if (root->val == targetSum)
+    {
+        ret++;
+    }
+
+    ret += rootSum(root->left, targetSum - root->val);
+    ret += rootSum(root->right, targetSum - root->val);
+    return ret;
+}
+
 int pathSum(TreeNode *root, int targetSum)
 {
+    if (!root)
+    {
+        return 0;
+    }
+
+    int ret = rootSum(root, targetSum);
+    ret += pathSum(root->left, targetSum);
+    ret += pathSum(root->right, targetSum);
+    return ret;
 }

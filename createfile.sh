@@ -16,16 +16,16 @@ mkdir ${PRE_DIR}/${TAR_DIR}
 scrot -s ${PRE_DIR}/${TAR_DIR}/leet_$1.png
 
 #备份前一次代码
-if [ -f "./main.old.cpp" ]; then
-    rm main.old.cpp
+if [ -f "./src/main.old.cpp" ]; then
+    rm src/main.old.cpp
 fi
-mv $(pwd)/main.cpp $(pwd)/main.old.cpp
+mv $(pwd)/src/main.cpp $(pwd)/src/main.old.cpp
 
 #写入标志信息
 URL=//...https://leetcode-cn.com/problems/
 TIP=//...leetcode_$1_$(date "+%Y-%m-%d")
-cp ${PRE_DIR}/examples/main-example.cpp $(pwd)/main.cpp
+cp ${PRE_DIR}/examples/main-example.cpp $(pwd)/src/main.cpp
 sed -i "1i\
     $TIP\
-    \n$URL" $(pwd)/main.cpp
-cp $(pwd)/main.cpp ${PRE_DIR}/${TAR_DIR}/main.cpp
+    \n$URL" $(pwd)/src/main.cpp
+cp $(pwd)/src/main.cpp ${PRE_DIR}/${TAR_DIR}/main.cpp

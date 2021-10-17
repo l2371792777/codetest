@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared -Wl,-soname,libJsoncpp.so -o libJsoncpp.so CMakeFiles/Jsoncpp.dir/src/include/json_reader.o CMakeFiles/Jsoncpp.dir/src/include/json_value.o CMakeFiles/Jsoncpp.dir/src/include/json_writer.o 
