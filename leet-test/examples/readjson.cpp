@@ -1,5 +1,5 @@
 //please run
-//> g++ -o jsontest src/readjson.cpp -ljsoncpp
+//> g++ -o jsontest src/main.cpp -ljsoncpp
 #include <iostream>
 #include <fstream>
 #include <json/json.h> // or jsoncpp/json.h , or json/json.h etc.
@@ -8,20 +8,54 @@
 
 using namespace std;
 
+struct TreeNode
+{
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
+void createData(TreeNode *root, Json::Value obj, int pos);
+
 int main()
 {
-    ifstream ifs("data/test.json");
+    ifstream ifs("data/leetcode.json");
     Json::Reader reader;
     Json::Value obj;
     reader.parse(ifs, obj); // reader can also read strings
-    cout << "Book: " << obj["book"].asString() << endl;
-    cout << "Year: " << obj["year"].asString() << endl;
-    const Json::Value &characters = obj["characters"]; // array of characters
-    for (int i = 0; i < characters.size(); i++)
+
+    TreeNode *root = new TreeNode;
+    if (obj["data"].size() > 0)
     {
-        cout << "    name: " << characters[i]["name"].asString();
-        cout << " chapter: " << characters[i]["chapter"].asUInt();
-        cout << endl;
+        createData(root, obj["data"], 1);
     }
     return 0;
+}
+
+void createData(TreeNode *root, Json::Value obj, int pos)
+{
+    int n = obj.size();
+    root->val = obj[pos - 1].asInt();
+    if (2 * pos > n || obj[2 * pos - 1].isNull())
+    {
+        root->left = NULL;
+    }
+    else
+    {
+        root->left = new TreeNode;
+        createData(root->left, obj, 2 * pos);
+    }
+
+    if (2 * pos + 1 > n || obj[2 * pos].isNull())
+    {
+        root->right = NULL;
+    }
+    else
+    {
+        root->right = new TreeNode;
+        createData(root->right, obj, 2 * pos + 1);
+    }
 }
