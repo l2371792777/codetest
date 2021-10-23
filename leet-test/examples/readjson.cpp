@@ -22,7 +22,8 @@ void createData(TreeNode *root, Json::Value obj, int pos);
 
 int main()
 {
-    ifstream ifs("data/leetcode.json");
+    string jsonFile = "../data/leetcode.json";
+    ifstream ifs(jsonFile);
     Json::Reader reader;
     Json::Value obj;
     reader.parse(ifs, obj); // reader can also read strings

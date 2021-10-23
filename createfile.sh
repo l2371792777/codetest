@@ -5,8 +5,8 @@ if [ $# != 1 ]; then
     exit
 fi
 
-PRE_DIR=$(pwd)/leet-test
-TAR_DIR=/starting/leet_$1_$(date "+%Y-%m-%d")
+readonly PRE_DIR=$(pwd)/leet-test
+readonly TAR_DIR=/starting/leet_$1_$(date "+%Y-%m-%d")
 
 #创建目标文件
 if [ -d "${PRE_DIR}/${TAR_DIR}" ]; then
@@ -15,17 +15,14 @@ fi
 mkdir ${PRE_DIR}/${TAR_DIR}
 scrot -s ${PRE_DIR}/${TAR_DIR}/leet_$1.png
 
-#备份前一次代码
-if [ -f "./src/main.old.cpp" ]; then
-    rm src/main.old.cpp
-fi
-mv $(pwd)/src/main.cpp $(pwd)/src/main.old.cpp
-
 #写入标志信息
 URL=//...https://leetcode-cn.com/problems/
 TIP=//...leetcode_$1_$(date "+%Y-%m-%d")
-cp ${PRE_DIR}/examples/main-example.cpp $(pwd)/src/main.cpp
+cp ${PRE_DIR}/examples/main-example.cpp ${PRE_DIR}/${TAR_DIR}/main.cpp
 sed -i "1i\
     $TIP\
-    \n$URL" $(pwd)/src/main.cpp
-cp $(pwd)/src/main.cpp ${PRE_DIR}/${TAR_DIR}/main.cpp
+    \n$URL" ${PRE_DIR}/${TAR_DIR}/main.cpp
+cp ${PRE_DIR}/${TAR_DIR}/main.cpp ./main.cpp
+
+#logs
+echo -e "\nparameters:$1\ncreate-> ${TIP}" >> $(pwd)/leet-test/logs/create-logs.txt

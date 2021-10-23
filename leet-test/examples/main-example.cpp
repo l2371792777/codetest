@@ -2,18 +2,22 @@
 #include <vector>
 #include <algorithm>
 #include <limits.h>
+#include <cmath>
 
 using namespace std;
 
 void test();
-
+class Solution
+{
+public:
+    void test()
+    {
+    }
+};
 
 int main()
 {
-    test();
+    Solution solu;
+    solu.test();
     return 0;
-}
-
-void test()
-{
 }
