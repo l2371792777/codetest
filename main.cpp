@@ -1,4 +1,4 @@
-//...leetcode_test_2021-10-23    
+//...leetcode_9_2021-10-25    
 //...https://leetcode-cn.com/problems/
 #include <iostream>
 #include <vector>
@@ -8,7 +8,6 @@
 
 using namespace std;
 
-void test();
 class Solution
 {
 public:
