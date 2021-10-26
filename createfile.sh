@@ -25,4 +25,4 @@ sed -i "1i\
 cp ${PRE_DIR}/${TAR_DIR}/main.cpp ./main.cpp
 
 #logs
-echo -e "\nparameters:$1\ncreate-> ${TIP}" >> $(pwd)/leet-test/logs/create-logs.txt
+echo -e "parameters:$1\ncreate-> ${TIP}" >> $(pwd)/leet-test/logs/create-logs.txt
