@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/main.dir/main.o -o main  -ljsoncpp 
+/usr/bin/c++ -rdynamic CMakeFiles/main.dir/main.o -o main   -L/home/ayanami/source/code/codetest/src/lib  -Wl,-rpath,/home/ayanami/source/code/codetest/src/lib -ljsoncpp src/lib/libtest_shared.so -ljsoncpp 

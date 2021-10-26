@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayanami/source/code/codetest/CMakeFiles /home/ayanami/source/code/codetest//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/ayanami/source/code/codetest && $(CMAKE_COMMAND) -E cmake_progress_start /home/ayanami/source/code/codetest/CMakeFiles /home/ayanami/source/code/codetest/src//CMakeFiles/progress.marks
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayanami/source/code/codetest/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,59 +103,47 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ayanami/source/code/codetest && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+src/CMakeFiles/test_shared.dir/rule:
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/test_shared.dir/rule
+.PHONY : src/CMakeFiles/test_shared.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named test_shared
-
-# Build rule for target.
-test_shared: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_shared
+# Convenience name for target.
+test_shared: src/CMakeFiles/test_shared.dir/rule
 .PHONY : test_shared
 
 # fast build rule for target.
 test_shared/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_shared.dir/build.make src/CMakeFiles/test_shared.dir/build
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_shared.dir/build.make src/CMakeFiles/test_shared.dir/build
 .PHONY : test_shared/fast
 
 # target to build an object file
-main.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.o
-.PHONY : main.o
+bin/test.o:
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_shared.dir/build.make src/CMakeFiles/test_shared.dir/bin/test.o
+.PHONY : bin/test.o
 
 # target to preprocess a source file
-main.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.i
-.PHONY : main.i
+bin/test.i:
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_shared.dir/build.make src/CMakeFiles/test_shared.dir/bin/test.i
+.PHONY : bin/test.i
 
 # target to generate assembly for a file
-main.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.s
-.PHONY : main.s
+bin/test.s:
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_shared.dir/build.make src/CMakeFiles/test_shared.dir/bin/test.s
+.PHONY : bin/test.s
 
 # Help Target
 help:
@@ -165,11 +153,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
 	@echo "... test_shared"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... bin/test.o"
+	@echo "... bin/test.i"
+	@echo "... bin/test.s"
 .PHONY : help
 
 
@@ -181,6 +168,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ayanami/source/code/codetest && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

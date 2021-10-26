@@ -8,12 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ayanami/source/code/codetest/main.cpp" "CMakeFiles/main.dir/main.o" "gcc" "CMakeFiles/main.dir/main.o.d"
+  "/home/ayanami/source/code/codetest/src/bin/test.cpp" "src/CMakeFiles/test_shared.dir/bin/test.o" "gcc" "src/CMakeFiles/test_shared.dir/bin/test.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ayanami/source/code/codetest/src/CMakeFiles/test_shared.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
