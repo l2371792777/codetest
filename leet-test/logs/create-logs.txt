@@ -16,3 +16,6 @@ create-> //...leetcode_240_2021-10-25
 
 parameters:9
 create-> //...leetcode_9_2021-10-25
+
+parameters:496
+create-> //...leetcode_496_2021-10-26
