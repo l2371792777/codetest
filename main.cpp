@@ -1,10 +1,11 @@
-//...leetcode_12_2021-10-26
+//...difficulty:Medium    
+//...leetcode_22_2021-10-27    
 //...https://leetcode-cn.com/problems/
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <limits.h>
-#include "test.h"
+#include <string>
 #include <cmath>
 
 using namespace std;
@@ -21,6 +22,5 @@ int main()
 {
     Solution solu;
     solu.test();
-    test();
     return 0;
 }

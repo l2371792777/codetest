@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/test_shared.dir/bin/readJson.o"
+  "CMakeFiles/test_shared.dir/bin/readJson.o.d"
   "CMakeFiles/test_shared.dir/bin/test.o"
   "CMakeFiles/test_shared.dir/bin/test.o.d"
   "lib/libtest_shared.pdb"

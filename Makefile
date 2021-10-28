@@ -130,17 +130,17 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named test_shared
+# Target rules for targets named readjson
 
 # Build rule for target.
-test_shared: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_shared
-.PHONY : test_shared
+readjson: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 readjson
+.PHONY : readjson
 
 # fast build rule for target.
-test_shared/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_shared.dir/build.make src/CMakeFiles/test_shared.dir/build
-.PHONY : test_shared/fast
+readjson/fast:
+	$(MAKE) $(MAKESILENT) -f src/readjson/CMakeFiles/readjson.dir/build.make src/readjson/CMakeFiles/readjson.dir/build
+.PHONY : readjson/fast
 
 # target to build an object file
 main.o:
@@ -166,7 +166,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
-	@echo "... test_shared"
+	@echo "... readjson"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

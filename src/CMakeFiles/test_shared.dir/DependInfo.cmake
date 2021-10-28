@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/ayanami/source/code/codetest/src/bin/readJson.cpp" "src/CMakeFiles/test_shared.dir/bin/readJson.o" "gcc" "src/CMakeFiles/test_shared.dir/bin/readJson.o.d"
   "/home/ayanami/source/code/codetest/src/bin/test.cpp" "src/CMakeFiles/test_shared.dir/bin/test.o" "gcc" "src/CMakeFiles/test_shared.dir/bin/test.o.d"
   )
 

@@ -116,35 +116,6 @@ depend:
 	cd /home/ayanami/source/code/codetest && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-src/CMakeFiles/test_shared.dir/rule:
-	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/test_shared.dir/rule
-.PHONY : src/CMakeFiles/test_shared.dir/rule
-
-# Convenience name for target.
-test_shared: src/CMakeFiles/test_shared.dir/rule
-.PHONY : test_shared
-
-# fast build rule for target.
-test_shared/fast:
-	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_shared.dir/build.make src/CMakeFiles/test_shared.dir/build
-.PHONY : test_shared/fast
-
-# target to build an object file
-bin/test.o:
-	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_shared.dir/build.make src/CMakeFiles/test_shared.dir/bin/test.o
-.PHONY : bin/test.o
-
-# target to preprocess a source file
-bin/test.i:
-	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_shared.dir/build.make src/CMakeFiles/test_shared.dir/bin/test.i
-.PHONY : bin/test.i
-
-# target to generate assembly for a file
-bin/test.s:
-	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_shared.dir/build.make src/CMakeFiles/test_shared.dir/bin/test.s
-.PHONY : bin/test.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -153,10 +124,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test_shared"
-	@echo "... bin/test.o"
-	@echo "... bin/test.i"
-	@echo "... bin/test.s"
 .PHONY : help
 
 

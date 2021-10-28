@@ -2,7 +2,7 @@
 #include <vector>
 #include <algorithm>
 #include <limits.h>
-#include<string>
+#include <string>
 #include <cmath>
 
 using namespace std;
