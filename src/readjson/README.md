@@ -1,24 +1,33 @@
-//...difficulty:Medium
-//...leetcode_22_2021-10-27
-//...https://leetcode-cn.com/problems/
+## json转c++数据结构
+
+### use
+
+加载libreadjson.so  
+将readJson.h放入项目目录  
+include"readJson.h"  
+
+### example
+./example  
+├── CMakeLists.txt  
+├── include    
+│   └── readJson.h  
+├── lib  
+│   └── libreadjson.so  
+├── main.cpp  
+└── test.json  
+
+test.json
+```
+{
+    "data":[3,1,4,null,2]
+}
+```
+main.cpp
+```
 #include <iostream>
-#include <vector>
-#include <algorithm>
-#include <limits.h>
-#include <string>
 #include "readJson.h"
-#include <cmath>
 
 using namespace std;
-
-class Solution
-{
-public:
-    void test()
-    {
-        cout << "test";
-    }
-};
 
 struct TreeNode
 {
@@ -45,7 +54,9 @@ int main()
 {
     TreeNode *head;
     readJson<TreeNode> test;
-    head = test.jsonToTree("leet-test/data/leetcode.json");
+    head = test.jsonToTree("test.json");
     dfs(head);
     return 0;
 }
+
+```

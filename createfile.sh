@@ -19,7 +19,7 @@ if [[ $difficulty == 0 ]] || [[ $difficulty -gt ${#difficulties[@]}-1 ]]; then
 fi
 difficulty=${difficulties[$difficulty]}
 
-readonly PRE_DIR=$(pwd)/leet-test
+readonly PRE_DIR=`dirname $0`/leet-test
 readonly TAR_DIR=/starting/[$difficulty]leet_$1_$(date "+%Y-%m-%d")
 
 #创建目标文件
@@ -39,4 +39,4 @@ sed -i "1i\
     $DIF    \n$TIP    \n$URL" ${PRE_DIR}/${TAR_DIR}/main.cpp
 
 #logs
-echo -e "parameters:$1\ndifficulty:$difficulty\ncreate=> ${TIP}" >>$(pwd)/leet-test/logs/create-logs.txt
+echo -e "parameters:$1\ndifficulty:$difficulty\ncreate=> ${TIP}" >>`dirname $0`/leet-test/logs/create-logs.txt

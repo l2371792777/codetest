@@ -12,44 +12,60 @@
 using namespace std;
 
 template <typename TreeNode>
-void toTree(TreeNode *root, Json::Value obj, int pos)
+class readJson
 {
-    int n = obj.size();
-    root->val = obj[pos - 1].asInt();
-    if (2 * pos > n || obj[2 * pos - 1].isNull())
+public:
+    readJson() { root = new TreeNode; };
+    ~readJson() { delete root; };
+
+    TreeNode *jsonToTree(string jsonFilePath)
     {
-        root->left = NULL;
-    }
-    else
-    {
-        root->left = new TreeNode;
-        toTree(root->left, obj, 2 * pos);
+        ifstream ifs;
+        Json::Value obj;
+        Json::Reader reader;
+        try
+        {
+            ifs.open(jsonFilePath);
+            reader.parse(ifs, obj); // reader can also read strings
+        }
+        catch (const std::exception &e)
+        {
+            std::cerr << e.what() << '\n';
+        }
+
+        if (obj["data"].size() > 0)
+        {
+            toTree(root, obj["data"], 1);
+        }
+        return root;
     }
 
-    if (2 * pos + 1 > n || obj[2 * pos].isNull())
+private:
+    TreeNode *root;
+    void toTree(TreeNode *root, Json::Value obj, int pos)
     {
-        root->right = NULL;
-    }
-    else
-    {
-        root->right = new TreeNode;
-        toTree(root->right, obj, 2 * pos + 1);
-    }
-}
+        int n = obj.size();
+        root->val = obj[pos - 1].asInt(); //string转int
+        if (2 * pos > n || obj[2 * pos - 1].isNull())
+        {
+            root->left = NULL;
+        }
+        else
+        {
+            root->left = new TreeNode;
+            toTree(root->left, obj, 2 * pos);
+        }
 
-template <typename TreeNode>
-bool jsonToTree(string jsonFilePath, TreeNode *root)
-{
-    ifstream ifs(jsonFilePath);
-    Json::Reader reader;
-    Json::Value obj;
-    reader.parse(ifs, obj); // reader can also read strings
-
-    if (obj["data"].size() > 0)
-    {
-        toTree(root, obj["data"], 1);
+        if (2 * pos + 1 > n || obj[2 * pos].isNull())
+        {
+            root->right = NULL;
+        }
+        else
+        {
+            root->right = new TreeNode;
+            toTree(root->right, obj, 2 * pos + 1);
+        }
     }
-    return true;
-}
+};
 
 #endif
