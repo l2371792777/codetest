@@ -48,3 +48,27 @@ create=> //...leetcode_test_2021-10-29
 parameters:test
 difficulty:Medium
 create=> //...leetcode_test_2021-10-29
+parameters:test
+difficulty:Simple
+create=> //...leetcode_test_2021-10-30
+parameters:test
+difficulty:Simple
+create=> //...leetcode_test
+parameters:test
+difficulty:Medium
+create=> //...leetcode_test_2021-10-30
+parameters:test
+difficulty:Simple
+create=> leetcode_test_2021-10-30
+parameters:test
+difficulty:Simple
+create=> leetcode_test_2021-10-30
+parameters:test
+difficulty:Simple
+create=> leetcode_test_2021-10-30
+parameters:test
+difficulty:Simple
+create=> creattime:2021-10-30
+parameters:test
+difficulty:Simple
+create=> creat time:2021-10-30

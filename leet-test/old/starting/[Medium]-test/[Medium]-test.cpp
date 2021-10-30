@@ -1,6 +1,3 @@
-//...difficulty:Medium    
-//...leetcode_test_2021-10-29    
-//...https://leetcode-cn.com/problems/
 #include <iostream>
 #include <vector>
 #include <algorithm>
