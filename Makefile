@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named createleetcode
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+createleetcode: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 createleetcode
+.PHONY : createleetcode
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+createleetcode/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/createleetcode.dir/build.make CMakeFiles/createleetcode.dir/build
+.PHONY : createleetcode/fast
 
 #=============================================================================
 # Target rules for targets named readjson
@@ -144,17 +144,17 @@ readjson/fast:
 
 # target to build an object file
 main.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/createleetcode.dir/build.make CMakeFiles/createleetcode.dir/main.o
 .PHONY : main.o
 
 # target to preprocess a source file
 main.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/createleetcode.dir/build.make CMakeFiles/createleetcode.dir/main.i
 .PHONY : main.i
 
 # target to generate assembly for a file
 main.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/createleetcode.dir/build.make CMakeFiles/createleetcode.dir/main.s
 .PHONY : main.s
 
 # Help Target
@@ -165,7 +165,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
+	@echo "... createleetcode"
 	@echo "... readjson"
 	@echo "... main.o"
 	@echo "... main.i"

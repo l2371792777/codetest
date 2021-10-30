@@ -41,11 +41,12 @@ void dfs(TreeNode *root)
     dfs(root->right);
 }
 
-int main()
+int main(int argc, char *argv[])
 {
-    TreeNode *head;
-    readJson<TreeNode> test;
-    head = test.jsonToTree("leet-test/data/leetcode.json");
-    dfs(head);
+    // TreeNode *head;
+    // readJson<TreeNode> test;
+    // head = test.jsonToTree("data/leetcode.json");
+    // dfs(head);
+    getleetcode(argv[1]);
     return 0;
 }

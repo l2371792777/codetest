@@ -11,13 +11,12 @@
 #include "readJson.h"
 using namespace std;
 
-template <typename TreeNode>
-class readJson
+class readJsonbasic
 {
 public:
-    readJson() { root = new TreeNode; };
-    ~readJson() { delete root; };
-    TreeNode *jsonToTree(string jsonFilePath)
+    readJsonbasic(){};
+    ~readJsonbasic(){};
+    static Json::Value readjsonFile(string jsonFilePath)
     {
         ifstream ifs;
         Json::Value obj;
@@ -31,7 +30,21 @@ public:
         {
             std::cerr << e.what() << '\n';
         }
+        return obj;
+    }
+};
 
+template <typename TreeNode>
+class readJson : public readJsonbasic
+{
+public:
+    readJson() { root = new TreeNode; };
+    ~readJson() { delete root; };
+
+    TreeNode *jsonToTree(string jsonFilePath)
+    {
+        Json::Value obj;
+        obj = readjsonFile(jsonFilePath);
         if (obj["data"].size() > 0)
         {
             toTree(root, obj["data"], 1);
@@ -66,5 +79,8 @@ private:
         }
     }
 };
+
+void getleetcode(string filePath);
+void runshell(string strCmd, const char *type);
 
 #endif

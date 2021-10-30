@@ -72,3 +72,15 @@ create=> creattime:2021-10-30
 parameters:test
 difficulty:Simple
 create=> creat time:2021-10-30
+Sat Oct 30 08:46:00 PM CST 2021
+echo -e "title:  
+questionId:  
+difficult:Easy  " >'leet-test/leetcode/[Easy]--.md'
+Sat Oct 30 08:46:20 PM CST 2021
+echo -e "title:  
+questionId:  
+difficult:Easy  " >'leet-test/leetcode/[Easy]--.md'
+Sat Oct 30 08:48:12 PM CST 2021
+echo -e "title:Two Num  
+questionId:001  
+difficult:Medium  " >'leet-test/leetcode/[Medium]-001-Two Num.md'

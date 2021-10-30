@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/ayanami/source/code/codetest
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/main.dir/all
+all: CMakeFiles/createleetcode.dir/all
 all: src/all
 .PHONY : all
 
@@ -72,7 +72,7 @@ preinstall: src/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/createleetcode.dir/clean
 clean: src/clean
 .PHONY : clean
 
@@ -107,30 +107,30 @@ src/readjson/clean: src/readjson/CMakeFiles/readjson.dir/clean
 .PHONY : src/readjson/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.dir
+# Target rules for target CMakeFiles/createleetcode.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all: src/readjson/CMakeFiles/readjson.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayanami/source/code/codetest/CMakeFiles --progress-num=1,2 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
+CMakeFiles/createleetcode.dir/all: src/readjson/CMakeFiles/readjson.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/createleetcode.dir/build.make CMakeFiles/createleetcode.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/createleetcode.dir/build.make CMakeFiles/createleetcode.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayanami/source/code/codetest/CMakeFiles --progress-num=1,2 "Built target createleetcode"
+.PHONY : CMakeFiles/createleetcode.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
+CMakeFiles/createleetcode.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayanami/source/code/codetest/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/createleetcode.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayanami/source/code/codetest/CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
+.PHONY : CMakeFiles/createleetcode.dir/rule
 
 # Convenience name for target.
-main: CMakeFiles/main.dir/rule
-.PHONY : main
+createleetcode: CMakeFiles/createleetcode.dir/rule
+.PHONY : createleetcode
 
 # clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+CMakeFiles/createleetcode.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/createleetcode.dir/build.make CMakeFiles/createleetcode.dir/clean
+.PHONY : CMakeFiles/createleetcode.dir/clean
 
 #=============================================================================
 # Target rules for target src/readjson/CMakeFiles/readjson.dir

@@ -1,5 +1,0 @@
-Book: Alice in Wonderland
-Year: 1865
-    name: Jabberwock chapter: 1
-    name: Cheshire Cat chapter: 6
-    name: Mad Hatter chapter: 7
