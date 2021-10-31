@@ -33,6 +33,7 @@ def get_problem_content(slug):
     fh.writelines("# "+question['questionId']+"."+question["translatedTitle"]+"\n")
     fh.writelines(question['difficulty']+"  \n")
     fh.writelines(convert(question['translatedContent']))
+    fh.writelines(convert("\n### 题解:  \n```  \n```"))
     fh.close()
 
 

@@ -13,6 +13,9 @@ public:
     void test()
     {
     }
+    vector<string> findWords(vector<string> &words)
+    {
+    }
 };
 
 int main()

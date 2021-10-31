@@ -1,3 +1,0 @@
-title:"Two Num"
-questionId:"001"
-difficulty:Medium

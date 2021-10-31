@@ -1,11 +1,12 @@
 #!/bin/bash
 
-readonly title="two-sum"
-readonly pre_dir="leet-test/leetcode/"
+readonly title=keyboard-row
+readonly pre_dir="leetcode/document/"
 
-echo $(date) >>leet-test/logs/create-logs.txt
-echo title:$title >>leet-test/logs/create-logs.txt
-python leet-test/creat-leetcode-md.py $title $pre_dir
+#logs
+echo -e "$(date)\ntitle:$title" >>leetcode/logs/create-logs.txt
+#markdown
+python leetcode/creat-leetcode-md.py $title $pre_dir
 
 # if [ $# != 1 ]; then
 #     echo "please enter parameters"
