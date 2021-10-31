@@ -84,3 +84,13 @@ Sat Oct 30 08:48:12 PM CST 2021
 echo -e "title:Two Num  
 questionId:001  
 difficult:Medium  " >'leet-test/leetcode/[Medium]-001-Two Num.md'
+Sat Oct 30 08:50:12 PM CST 2021
+echo -e "title:Two Num  
+questionId:001  
+difficult:Medium  " >'leet-test/leetcode/[Medium]-001-Two Num.md'
+Sun Oct 31 01:55:22 PM CST 2021
+two-sum
+Sun Oct 31 01:55:35 PM CST 2021
+two-sum
+Sun Oct 31 01:55:55 PM CST 2021
+two-sum

@@ -1,5 +1,3 @@
-//please run
-//> g++ -o jsontest src/main.cpp -ljsoncpp
 #include <iostream>
 #include <fstream>
 #include <string>

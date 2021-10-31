@@ -1,7 +1,11 @@
 #!/bin/bash
 
+readonly title="two-sum"
+readonly pre_dir="leet-test/leetcode/"
+
 echo $(date) >>leet-test/logs/create-logs.txt
-leet-test/createleetcode leet-test/data/subject.json >>leet-test/logs/create-logs.txt
+echo title:$title >>leet-test/logs/create-logs.txt
+python leet-test/creat-leetcode-md.py $title $pre_dir
 
 # if [ $# != 1 ]; then
 #     echo "please enter parameters"
