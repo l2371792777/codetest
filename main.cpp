@@ -43,10 +43,10 @@ void dfs(TreeNode *root)
 
 int main(int argc, char *argv[])
 {
-    // TreeNode *head;
-    // readJson<TreeNode> test;
-    // head = test.jsonToTree("data/leetcode.json");
-    // dfs(head);
-    getleetcode(argv[1]);
+    TreeNode *head;
+    readJson<TreeNode> test;
+    head = test.jsonToTree("leetcode/data/leetcode.json");
+    dfs(head);
+    // getleetcode(argv[1]);
     return 0;
 }

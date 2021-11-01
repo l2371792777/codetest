@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/main.dir/main.o -o main   -L/home/ayanami/source/code/codetest/src/lib  -Wl,-rpath,/home/ayanami/source/code/codetest/src/lib src/lib/libreadjson.so -ljsoncpp 
+/usr/bin/c++ -rdynamic CMakeFiles/main.dir/main.o -o main   -L/home/ayanami/source/code/codetest/cpplib/lib  -Wl,-rpath,/home/ayanami/source/code/codetest/cpplib/lib cpplib/lib/libreadjson.so -ljsoncpp 

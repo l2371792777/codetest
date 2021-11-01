@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ayanami/source/code/codetest/src/readjson/include
+CXX_INCLUDES = -I/home/ayanami/source/code/codetest/cpplib/readjson/include
 
 CXX_FLAGS = 
 

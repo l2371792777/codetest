@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayanami/source/code/codetest/CMakeFiles /home/ayanami/source/code/codetest//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/ayanami/source/code/codetest && $(CMAKE_COMMAND) -E cmake_progress_start /home/ayanami/source/code/codetest/CMakeFiles /home/ayanami/source/code/codetest/cpplib/readjson//CMakeFiles/progress.marks
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpplib/readjson/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayanami/source/code/codetest/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpplib/readjson/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,59 +103,47 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpplib/readjson/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpplib/readjson/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ayanami/source/code/codetest && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+cpplib/readjson/CMakeFiles/readjson.dir/rule:
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpplib/readjson/CMakeFiles/readjson.dir/rule
+.PHONY : cpplib/readjson/CMakeFiles/readjson.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named readjson
-
-# Build rule for target.
-readjson: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 readjson
+# Convenience name for target.
+readjson: cpplib/readjson/CMakeFiles/readjson.dir/rule
 .PHONY : readjson
 
 # fast build rule for target.
 readjson/fast:
-	$(MAKE) $(MAKESILENT) -f cpplib/readjson/CMakeFiles/readjson.dir/build.make cpplib/readjson/CMakeFiles/readjson.dir/build
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f cpplib/readjson/CMakeFiles/readjson.dir/build.make cpplib/readjson/CMakeFiles/readjson.dir/build
 .PHONY : readjson/fast
 
 # target to build an object file
-main.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.o
-.PHONY : main.o
+bin/readJson.o:
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f cpplib/readjson/CMakeFiles/readjson.dir/build.make cpplib/readjson/CMakeFiles/readjson.dir/bin/readJson.o
+.PHONY : bin/readJson.o
 
 # target to preprocess a source file
-main.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.i
-.PHONY : main.i
+bin/readJson.i:
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f cpplib/readjson/CMakeFiles/readjson.dir/build.make cpplib/readjson/CMakeFiles/readjson.dir/bin/readJson.i
+.PHONY : bin/readJson.i
 
 # target to generate assembly for a file
-main.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.s
-.PHONY : main.s
+bin/readJson.s:
+	cd /home/ayanami/source/code/codetest && $(MAKE) $(MAKESILENT) -f cpplib/readjson/CMakeFiles/readjson.dir/build.make cpplib/readjson/CMakeFiles/readjson.dir/bin/readJson.s
+.PHONY : bin/readJson.s
 
 # Help Target
 help:
@@ -165,11 +153,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
 	@echo "... readjson"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... bin/readJson.o"
+	@echo "... bin/readJson.i"
+	@echo "... bin/readJson.s"
 .PHONY : help
 
 
@@ -181,6 +168,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ayanami/source/code/codetest && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
